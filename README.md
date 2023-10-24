@@ -1,5 +1,8 @@
 # TOS-Keycloak sur Kubernetes avec Helm
 
+Sur votre Master, installez Keycloak avec helm :
+Le fichier values.yaml est disponible dans le repo.
+
 ```
 helm repo add bitnami https`h://charts.bitnami.com/bitnami
 helm repo update
@@ -12,7 +15,7 @@ Il faut ensuite se rendre sur le keycloak, avec l'url : ip_du_serveur:port
 - Créez un realm `digital-jukebox-front`
 - Créez un client `digital-jukebox-client`
    - Dans la partie name `${client_account}`
-   - Dans la partie root url et home url : `http://192.168.14.110:31267/admin/digital-jukebox-keycloak/console/`
+   - Dans la partie root url et home url : `http://votre_ip:votre_port/admin/digital-jukebox-keycloak/console/`
    - Activez "client authentification", "autorization", "strandard flow", "direct access grant"
 - Créez un user
    - Définir un user, un mail, un nom et un prénom
